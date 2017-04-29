@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.Group?>
-<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ProgressBar?>
 <?import javafx.scene.control.ScrollPane?>
@@ -9,28 +9,27 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.shape.Rectangle?>
 
-<ScrollPane xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.mainPageController">
+<ScrollPane xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.mainPageController">
    <content>
       <AnchorPane prefHeight="400.0" prefWidth="600.0">
          <children>
-            <ProgressBar layoutX="240.0" layoutY="343.0" prefWidth="200.0" progress="0.0" />
+            <ProgressBar layoutX="240.0" layoutY="343.0" prefWidth="200.0" progress="1.0" />
             <Label layoutX="173.0" layoutY="345.0" text="Progress: " />
-            <Group layoutX="125.0" layoutY="57.0" AnchorPane.leftAnchor="125.0" AnchorPane.rightAnchor="119.0">
+            <Group AnchorPane.bottomAnchor="310.0" AnchorPane.leftAnchor="130.0" AnchorPane.rightAnchor="370.0" AnchorPane.topAnchor="90.0">
                <children>
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="232.0" stroke="BLACK" strokeType="INSIDE" width="356.0" />
-                  <CheckBox fx:id="option_1_checkbox" layoutX="17.0" layoutY="10.0" mnemonicParsing="false" text="Certificate of Label Approval" />
-                  <CheckBox fx:id="option_2_checkbox" layoutX="17.0" layoutY="36.0" mnemonicParsing="false" text="Certificate of Exemption from Label Approval" />
-                  <TextField fx:id="option_2_text" layoutX="96.0" layoutY="59.0" prefHeight="31.0" prefWidth="65.0" promptText="State" />
-                  <Label layoutX="18.0" layoutY="64.0" text="For Sale in:" />
-                  <Label layoutX="175.0" layoutY="64.0" text="only (State Abbreviation)" />
-                  <CheckBox fx:id="option_3_checkbox" layoutX="18.0" layoutY="100.0" mnemonicParsing="false" text="Distinctive Bottle Approval, Total Bottle" />
-                  <Label layoutX="17.0" layoutY="125.0" text="Capacity Before Closure" />
-                  <TextField fx:id="option_3_text" layoutX="180.0" layoutY="120.0" prefHeight="31.0" prefWidth="88.0" promptText="Capacity" />
-                  <CheckBox fx:id="option_4_checkbox" layoutX="17.0" layoutY="158.0" mnemonicParsing="false" text="Resubmission After Rejection" />
-                  <TextField fx:id="option_4_text" layoutX="68.0" layoutY="179.0" promptText="TTB ID" />
-                  <Label layoutX="17.0" layoutY="184.0" text="TTB ID" />
+                  <Rectangle fx:id="wineRec" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="178.0" stroke="BLACK" strokeType="INSIDE" width="353.0" />
+                  <TextField fx:id="grapeVarietals" layoutX="139.0" layoutY="51.0" prefHeight="31.0" prefWidth="197.0" promptText="Grape Varietal(s) " />
+                  <Label fx:id="grapeVarietalsLabel" layoutX="15.0" layoutY="55.0" text="Grape Varietal(s)" />
+                  <TextField fx:id="wineAppellation" layoutX="142.0" layoutY="13.0" prefHeight="31.0" prefWidth="195.0" promptText="Wine Appelation (If On Label)" />
+                  <Label fx:id="wineAppellationLabel" layoutX="16.0" layoutY="18.0" text="Wine Appelation" />
+                  <Label fx:id="vintageYearLabel" layoutX="16.0" layoutY="98.0" text="Vintage Year" />
+                  <TextField fx:id="vintageYear" layoutX="139.0" layoutY="93.0" prefHeight="31.0" prefWidth="198.0" promptText="Vintage Year" />
+                  <Label fx:id="phLevelLabel" layoutX="19.0" layoutY="136.0" text="PH Level" />
+                  <TextField fx:id="phLevel" layoutX="139.0" layoutY="131.0" prefHeight="31.0" prefWidth="199.0" promptText="PH Level (Required)" />
                </children>
             </Group>
+            <Button fx:id="backButton" layoutX="71.0" layoutY="338.0" mnemonicParsing="false" text="Back" />
+            <Button fx:id="nextButton" layoutX="483.0" layoutY="338.0" mnemonicParsing="false" text="Next" />
          </children>
       </AnchorPane>
    </content>
