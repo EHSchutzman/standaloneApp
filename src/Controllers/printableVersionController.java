@@ -3,11 +3,13 @@ package Controllers;
 import javafx.embed.swing.SwingFXUtils;
 import javafx.fxml.FXML;
 import javafx.scene.SnapshotParameters;
+import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.Label;
 import javafx.scene.image.WritableImage;
 import javafx.scene.layout.AnchorPane;
 
+import javax.annotation.Generated;
 import javax.imageio.ImageIO;
 import java.io.File;
 import java.io.IOException;
@@ -79,6 +81,8 @@ public class printableVersionController {
             cert_exemption_print,
             cert_distinctive_print,
             cert_resubmission_print;
+
+
     public void setFormPrintableVersion(Form form) {
         System.out.println("this is form" + form);
         System.out.println(form.getttb_id());
@@ -94,7 +98,7 @@ public class printableVersionController {
         grape_varietals_print.setText(form.getgrape_varietals());
         phone_no_print.setText(form.getphone_no());
         email_print.setText(form.getEmail());
-        mailing_street_address1_print.setText("");
+        mailing_street_address1_print.setText("");//fill these out sometime
         mailing_street_address2_print.setText("");
         mailing_second_line1_print.setText("");
         mailing_second_line2_print.setText("");
@@ -128,7 +132,14 @@ public class printableVersionController {
     }
 
 
+    @FXML
+    Button printButton;
     public void saveAsPng(){
+
+        printAnchorPane.getChildren().remove(printButton);
+
+        printButton.opacityProperty();
+
         WritableImage image = printAnchorPane.snapshot(new SnapshotParameters(), null);
         // TODO: probably use a file chooser here
         File file = new File(System.getProperty("user.dir") + "/form.png");
