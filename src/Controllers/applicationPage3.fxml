@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<ScrollPane xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.mainPageController">
+   <content>
+      <AnchorPane prefHeight="400.0" prefWidth="600.0">
+         <children>
+            <ProgressBar layoutX="240.0" layoutY="343.0" prefWidth="200.0" progress="0.0" />
+            <Label layoutX="173.0" layoutY="345.0" text="Progress: " />
+            <TextField fx:id="phoneNo" layoutX="127.0" layoutY="54.0" prefHeight="31.0" prefWidth="156.0" promptText="Phone Number" />
+            <Label layoutX="32.0" layoutY="61.0" text="Phone Number" />
+            <TextField fx:id="email" layoutX="404.0" layoutY="54.0" prefHeight="31.0" prefWidth="156.0" promptText="Email Address" />
+            <Label layoutX="311.0" layoutY="61.0" text="Email Address" />
+            <TextField fx:id="applicantStreet" layoutX="78.0" layoutY="119.0" promptText="Street" />
+            <TextField fx:id="applicantCity" layoutX="78.0" layoutY="147.0" promptText="City" />
+            <TextField fx:id="applicantState" layoutX="78.0" layoutY="175.0" promptText="State" />
+            <TextField fx:id="applicantZip" layoutX="78.0" layoutY="203.0" promptText="Zipcode" />
+            <TextField fx:id="applicantCountry" layoutX="78.0" layoutY="231.0" promptText="Country" />
+            <Label layoutX="24.0" layoutY="124.0" text="Street" />
+            <Label layoutX="24.0" layoutY="153.0" text="City" />
+            <Label layoutX="24.0" layoutY="181.0" text="State" />
+            <Label layoutX="24.0" layoutY="236.0" text="Country" />
+            <Label layoutX="23.0" layoutY="208.0" text="Zipcode" />
+            <CheckBox fx:id="sameAsApplicantBox" layoutX="23.0" layoutY="288.0" mnemonicParsing="false" onMouseClicked="#showSecondAddress" text="Check if Mailing Address is Different" />
+            <Group layoutX="340.0" layoutY="118.0">
+               <children>
+                  <TextField fx:id="otherStreet" layoutX="66.0" promptText="Street" visible="false" />
+                  <TextField fx:id="otherCity" layoutX="66.0" layoutY="40.0" promptText="City" visible="false" />
+                  <TextField fx:id="otherState" layoutX="66.0" layoutY="81.0" promptText="State" visible="false" />
+                  <TextField fx:id="otherZip" layoutX="66.0" layoutY="124.0" promptText="Zipcode" visible="false" />
+                  <TextField fx:id="otherCountry" layoutX="66.0" layoutY="163.0" promptText="Country" visible="false" />
+                  <Label fx:id="otherStreetLabel" layoutX="5.0" layoutY="5.0" text="Street" visible="false" />
+                  <Label fx:id="otherCityLabel" layoutX="9.0" layoutY="45.0" text="City" visible="false" />
+                  <Label fx:id="otherStateLabel" layoutX="5.0" layoutY="86.0" text="State" visible="false" />
+                  <Label fx:id="otherCountryLabel" layoutY="168.0" text="Country" visible="false" />
+                  <Label fx:id="otherZipcodeLabel" layoutY="129.0" text="Zipcode" visible="false" />
+               </children>
+            </Group>
+         </children>
+      </AnchorPane>
+   </content>
+</ScrollPane>

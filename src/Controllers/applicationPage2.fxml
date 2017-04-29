@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<ScrollPane xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.mainPageController">
+   <content>
+      <AnchorPane prefHeight="400.0" prefWidth="600.0">
+         <children>
+            <Label layoutX="141.0" layoutY="63.0" text="REP ID NO." />
+            <Label layoutX="141.0" layoutY="91.0" text="Permit/Brewer's NO." />
+            <Label layoutX="141.0" layoutY="119.0" text="Serial Number" />
+            <Label layoutX="141.0" layoutY="147.0" text="Brand Name" />
+            <Label layoutX="141.0" layoutY="176.0" text="Fanciful Name" />
+            <Label layoutX="141.0" layoutY="204.0" text="Alcohol Content" />
+            <Label layoutX="141.0" layoutY="232.0" text="Formula" />
+            <ComboBox fx:id="source_combobox" layoutX="52.0" layoutY="280.0" prefHeight="0.0" prefWidth="228.0" promptText="Source of Product (Required)" />
+            <ComboBox fx:id="alcohol_type_combobox" layoutX="330.0" layoutY="280.0" onAction="#checkType" prefHeight="2.0" prefWidth="215.0" promptText="Type of Product (Required)" />
+            <ProgressBar layoutX="240.0" layoutY="343.0" prefWidth="200.0" progress="0.0" />
+            <Label layoutX="173.0" layoutY="345.0" text="Progress: " />
+            <TextField fx:id="repID" layoutX="273.0" layoutY="58.0" promptText="REP. ID. NO. (If Any)" />
+            <TextField fx:id="permitNO" layoutX="273.0" layoutY="86.0" promptText="Brewer's NO. (Required)" />
+            <TextField fx:id="serialNO" layoutX="273.0" layoutY="114.0" promptText="Serial Number (Required)" />
+            <TextField fx:id="brandName" layoutX="273.0" layoutY="142.0" promptText="Brand Name (Required)" />
+            <TextField fx:id="fancifulName" layoutX="273.0" layoutY="171.0" promptText="Fanciful Name (If Any)" />
+            <TextField fx:id="alcoholContent" layoutX="273.0" layoutY="199.0" prefHeight="27.0" prefWidth="158.0" promptText="Alcohol Content" />
+            <TextField fx:id="formula" layoutX="273.0" layoutY="225.0" prefHeight="31.0" prefWidth="100.0" promptText="Formula" />
+         </children>
+      </AnchorPane>
+   </content>
+</ScrollPane>
