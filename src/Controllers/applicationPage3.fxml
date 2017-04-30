@@ -8,32 +8,44 @@
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
 
-<ScrollPane xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.applicationController">
+<ScrollPane fitToHeight="true" fitToWidth="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" stylesheets="@../../../Downloads/style.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.applicationController">
    <content>
-      <AnchorPane prefHeight="400.0" prefWidth="600.0">
+      <AnchorPane prefHeight="500.0" prefWidth="700.0">
          <children>
-            <ProgressBar layoutX="240.0" layoutY="343.0" prefWidth="200.0" progress="0.666666" />
-            <Label layoutX="173.0" layoutY="345.0" text="Progress: " />
-            <Group layoutX="125.0" layoutY="57.0" AnchorPane.leftAnchor="125.0" AnchorPane.rightAnchor="119.0">
+            <ProgressBar layoutX="284.0" layoutY="410.0" prefWidth="200.0" progress="0.666666" />
+            <Label layoutX="207.0" layoutY="410.0" text="Progress: " />
+            <Group layoutX="149.0" layoutY="121.0" AnchorPane.leftAnchor="166.0" AnchorPane.rightAnchor="161.4609375">
                <children>
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="232.0" stroke="BLACK" strokeType="INSIDE" width="356.0" />
-                  <CheckBox fx:id="option_1_checkbox" layoutX="17.0" layoutY="10.0" mnemonicParsing="false" text="Certificate of Label Approval" />
-                  <CheckBox fx:id="option_2_checkbox" layoutX="17.0" layoutY="36.0" mnemonicParsing="false" text="Certificate of Exemption from Label Approval" />
-                  <TextField fx:id="option_2_text" layoutX="96.0" layoutY="59.0" prefHeight="31.0" prefWidth="65.0" promptText="State" />
+                  <CheckBox fx:id="option_1_checkbox" layoutX="17.0" layoutY="10.0" mnemonicParsing="false" text="Certificate of Label Approval">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </CheckBox>
+                  <CheckBox fx:id="option_2_checkbox" layoutX="17.0" layoutY="36.0" mnemonicParsing="false" text="Certificate of Exemption from Label Approval">
+                     <font>
+                        <Font size="16.0" />
+                     </font></CheckBox>
+                  <TextField fx:id="option_2_text" layoutX="105.0" layoutY="58.0" prefHeight="31.0" prefWidth="65.0" promptText="State" />
                   <Label layoutX="18.0" layoutY="64.0" text="For Sale in:" />
                   <Label layoutX="175.0" layoutY="64.0" text="only (State Abbreviation)" />
-                  <CheckBox fx:id="option_3_checkbox" layoutX="18.0" layoutY="100.0" mnemonicParsing="false" text="Distinctive Bottle Approval, Total Bottle" />
-                  <Label layoutX="17.0" layoutY="125.0" text="Capacity Before Closure" />
-                  <TextField fx:id="option_3_text" layoutX="180.0" layoutY="120.0" prefHeight="31.0" prefWidth="88.0" promptText="Capacity" />
-                  <CheckBox fx:id="option_4_checkbox" layoutX="17.0" layoutY="158.0" mnemonicParsing="false" text="Resubmission After Rejection" />
-                  <TextField fx:id="option_4_text" layoutX="68.0" layoutY="179.0" promptText="TTB ID" />
+                  <CheckBox fx:id="option_3_checkbox" layoutX="18.0" layoutY="100.0" mnemonicParsing="false" text="Distinctive Bottle Approval, Total Bottle">
+                     <font>
+                        <Font size="16.0" />
+                     </font></CheckBox>
+                  <Label layoutX="17.0" layoutY="130.0" text="Capacity Before Closure" />
+                  <TextField fx:id="option_3_text" layoutX="207.0" layoutY="123.0" prefHeight="31.0" prefWidth="88.0" promptText="Capacity" />
+                  <CheckBox fx:id="option_4_checkbox" layoutX="18.0" layoutY="158.0" mnemonicParsing="false" text="Resubmission After Rejection">
+                     <font>
+                        <Font size="16.0" />
+                     </font></CheckBox>
+                  <TextField fx:id="option_4_text" layoutX="72.0" layoutY="182.0" promptText="TTB ID" />
                   <Label layoutX="17.0" layoutY="184.0" text="TTB ID" />
                </children>
             </Group>
-            <Button fx:id="backButton" layoutX="76.0" layoutY="338.0" mnemonicParsing="false" text="Back" />
-            <Button fx:id="nextButton" layoutX="481.0" layoutY="338.0" mnemonicParsing="false" text="Next" />
+            <Button fx:id="backButton" layoutX="120.0" layoutY="405.0" mnemonicParsing="false" text="Back" />
+            <Button fx:id="nextButton" layoutX="525.0" layoutY="405.0" mnemonicParsing="false" text="Next" />
          </children>
       </AnchorPane>
    </content>
